@@ -1,8 +1,11 @@
 package bank.entities;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 import javax.persistence.*;
+
 
 /**
  * Entity implementation class for Entity: Banque
@@ -20,11 +23,11 @@ public class Banque implements Serializable {
 	@GeneratedValue
 	private int id;
 	
-	@ManyToOne
-	private Client client;
+	@OneToMany
+	private List<Client> clients = new ArrayList<Client>();
 	
-	@ManyToOne
-	private Compte compte;
+	@OneToMany
+	private List<Compte> comptes = new ArrayList<Compte>();
 	
 	
 	public Banque() {

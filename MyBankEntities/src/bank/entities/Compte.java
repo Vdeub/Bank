@@ -21,10 +21,10 @@ public class Compte implements Serializable {
 	@GeneratedValue
 	private int id;
 	
-	@OneToOne
+	@ManyToOne
 	private Client client;
 	
-	@OneToMany
+	@ManyToOne
 	private Banque banque;
 	
 	public Compte() {
