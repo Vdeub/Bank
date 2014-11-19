@@ -21,9 +21,11 @@ public class Compte implements Serializable {
 	@GeneratedValue
 	private int id;
 	
+	// Plusieurs Comptes pour un Client
 	@ManyToOne
 	private Client client;
 	
+	// Plusieurs Comptes pour une Banque
 	@ManyToOne
 	private Banque banque;
 	

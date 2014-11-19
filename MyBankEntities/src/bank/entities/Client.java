@@ -24,9 +24,11 @@ public class Client implements Serializable {
 	@GeneratedValue
 	private int id;
 	
+	// Un Client a une Banque
 	@OneToOne
 	private Banque banque;
 	
+	// Un client a plusieurs Comptes
 	@OneToMany
 	private List<Compte> comptes = new ArrayList<Compte>();
 
