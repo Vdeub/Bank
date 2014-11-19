@@ -23,7 +23,7 @@ public class Banque implements Serializable {
 	@ManyToOne
 	private Client client;
 	
-	@OneToMany
+	@ManyToOne
 	private Compte compte;
 	
 	
