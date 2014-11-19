@@ -14,6 +14,8 @@ public class Client implements Serializable {
 	/**
 	 * 
 	 */
+	private String login;
+	private String mdp;
 	private static final long serialVersionUID = 1L;
 
 	@Id

@@ -14,6 +14,7 @@ public class Compte implements Serializable {
 	/**
 	 * 
 	 */
+	private double solde;
 	private static final long serialVersionUID = 1L;
 
 	@Id
@@ -54,6 +55,17 @@ public class Compte implements Serializable {
 		this.banque = banque;
 	}
 
-
+	public void depotArgent(double montant){
+		//Si le montant est négatif, c'est un débit et non un dépot
+		if(montant<0) retraitArgent(-1*montant);
+		//SInon c'est un dépot !
+		else solde = solde + montant;
+	}
+	
+	public void retraitArgent(double montant){
+		//Si le montant est négatif, c'est un dépot et non un débit
+		if(montant<0) retraitArgent(-1*montant);
+		else solde = solde - montant;
+	}
 
 }
