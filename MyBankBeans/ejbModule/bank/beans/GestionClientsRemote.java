@@ -9,13 +9,13 @@ import bank.entities.*;
 @Remote
 public interface GestionClientsRemote {
 	
-	Client ajouterLecteur(Client unClient);
+	Client ajouterClient(Client unClient);
 	
-	public List<Client> getListeLecteurs();
+	public List<Client> getListeClients();
 	
-	public void retirerLecteur(Client lecteur);
+	public void retirerClient(Client client);
 	
-	public Client findLecteur(String name);
+	public Client findClient(String name);
 	
-	public void modifierLecteur(Client lecteur) throws ClientInconnu;
+	public void modifierClient(Client client) throws ClientInconnu;
 }
